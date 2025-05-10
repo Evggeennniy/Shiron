@@ -121,6 +121,16 @@ body {
   }
 }
 
+.animated-slide {
+  position: relative;
+  transition: opacity 500ms ease-in-out, transform 300ms ease-in-out;
+  opacity: 0;
+}
+
+.animated-slide.active {
+  opacity: 1;
+}
+
 .container-big {
   margin: 0 auto;
   padding: 0 20px;
