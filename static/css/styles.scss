@@ -158,7 +158,13 @@ body {
     padding: 10px;
     max-width: 1400px;
     border-radius: 160px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .header-logotype {
+    width: 88.276px;
+    height: 40px;
+    flex-shrink: 0;
   }
 
   .nav {
@@ -198,6 +204,10 @@ body {
   @include mobile {
     .nav {
       gap: 20px;
+    }
+
+    .nav-button {
+      padding: 8px 12px;
     }
   }
 
@@ -509,7 +519,7 @@ body {
 
   @include netbook {
     .company__bg {
-      right: -500px;
+      right: -760px;
     }
   }
 
@@ -524,7 +534,7 @@ body {
     }
 
     .company__bg {
-      right: -750px;
+      right: -980px;
     }
   }
 }
