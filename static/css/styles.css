@@ -650,6 +650,7 @@ body {
   scroll-behavior: smooth;
   position: relative;
   padding: 30px 0;
+  pointer-events: none;
 }
 .gallery .gallery__list-cover::-webkit-scrollbar {
   display: none;
