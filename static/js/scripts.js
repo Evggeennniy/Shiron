@@ -1,10 +1,32 @@
 document.querySelector(".products__list").addEventListener("click", (event) => {
   const target = event.target;
-  console.log("click", target, target.classList.contains("products__desc-btn"));
   if (target.classList.contains("products__desc-btn")) {
     target.closest(".products__info").classList.toggle("active");
   }
 });
+
+document.querySelector(".bub-close-btn").addEventListener("click", (event) => {
+  const target = event.target;
+  document.querySelector(".orderform").classList.toggle("active");
+  target.closest(".workwithus__form").reset();
+});
+
+document
+  .querySelector(".assemblies__list")
+  .addEventListener("click", (event) => {
+    const target = event.target;
+    const clickedModelItem = target.closest(".assemblies__item");
+    const clickedModelName = clickedModelItem.querySelector(
+      ".assemblies__item-title"
+    );
+
+    if (target.classList.contains("order")) {
+      const form = document.querySelector(".orderform");
+      form.classList.toggle("active");
+      const formModelName = form.querySelector(".input-model-name");
+      formModelName.value = clickedModelName.textContent;
+    }
+  });
 
 const list = document.querySelector(".gallery__list");
 const prevBtn = document.querySelectorAll(".gallery__list-btn")[0];
