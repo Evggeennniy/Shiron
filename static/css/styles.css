@@ -180,7 +180,7 @@ body {
 }
 @media (max-width: 576px) {
   .header .nav {
-    gap: 20px;
+    gap: 10px;
   }
   .header .nav-button {
     padding: 8px 12px;
@@ -454,6 +454,7 @@ body {
   .company .company__advantages {
     flex-direction: column;
     align-items: start;
+    gap: 25px;
   }
   .company .company__bg {
     right: -980px;
@@ -580,7 +581,11 @@ body {
   font-weight: 600;
 }
 .assemblies .assembly__subtitle {
+  margin-bottom: 5px;
+}
+.assemblies .assembly__subtitle:nth-child(3) {
   margin-bottom: 30px;
+  color: gray;
 }
 .assemblies .assemblies__list {
   display: flex;
@@ -656,6 +661,11 @@ body {
 }
 .assemblies .assemblies__item-btn.link {
   flex: 1;
+}
+@media (max-width: 576px) {
+  .assemblies .assemblies__item-variant {
+    font-size: 11px;
+  }
 }
 @media (max-width: 767px) {
   .assemblies .assemblies__item {
@@ -825,6 +835,76 @@ body {
   }
 }
 
+.contact-btn {
+  background-color: #bf0;
+  position: fixed;
+  z-index: 8;
+  right: 50px;
+  bottom: 50px;
+  padding: 10px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: transform 100ms ease-in-out;
+}
+.contact-btn:active {
+  transform: scale(0.93);
+}
+.contact-btn svg {
+  display: block;
+}
+
+.contacts-panel {
+  visibility: hidden;
+}
+.contacts-panel .wrap {
+  background-color: #242323;
+  position: fixed;
+  z-index: 8;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.orderform {
+  position: fixed;
+  visibility: hidden;
+  inset: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.orderform.active {
+  visibility: visible;
+}
+.orderform .wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.orderform .workwithus__form {
+  width: 60%;
+  position: static;
+  flex: none;
+}
+.orderform .bub-close-btn {
+  color: black;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 20px;
+}
+@media (max-width: 767px) {
+  .orderform .workwithus__form {
+    width: 90%;
+  }
+}
+
 .footer {
   background-color: white;
 }
@@ -859,5 +939,17 @@ body {
     padding: 50px 15px;
     flex-direction: column;
     gap: 20px;
+  }
+  .footer .footer__logo-wrap {
+    order: 1;
+  }
+  .footer .footer__socials {
+    order: 3;
+  }
+  .footer .footer__info {
+    order: 2;
+  }
+  .footer .footer__madeby {
+    order: 4;
   }
 }/*# sourceMappingURL=styles.css.map */
