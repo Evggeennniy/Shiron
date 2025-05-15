@@ -11,6 +11,14 @@ document.querySelector(".bub-close-btn").addEventListener("click", (event) => {
   target.closest(".workwithus__form").reset();
 });
 
+document.querySelector(".btn-form-finder").addEventListener("click", () => {
+  document.querySelector(".workwithus__form").scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "nearest",
+  });
+});
+
 document
   .querySelector(".assemblies__list")
   .addEventListener("click", (event) => {
