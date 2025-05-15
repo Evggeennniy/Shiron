@@ -22,7 +22,7 @@ h1 {
   font-size: 46px;
 
   @include mobile {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 
@@ -974,6 +974,17 @@ body {
     justify-content: stretch;
     gap: 20px;
     width: 100%;
+    cursor: pointer;
+  }
+
+  .custom__service-ttl {
+    color: black;
+    flex: 1;
+    padding: 12px 10px;
+    border-radius: 15px;
+    background-color: #bf0;
+    text-align: center;
+    font-weight: 600;
   }
 
   @include tab {
@@ -1001,6 +1012,11 @@ body {
 
   svg {
     display: block;
+  }
+
+  @include mobile {
+    right: 20px;
+    bottom: 20px;
   }
 }
 
