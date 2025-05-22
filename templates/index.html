@@ -17,6 +17,7 @@
     />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Shiron FPV" />
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -29,6 +30,26 @@
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-5DJP4BHH");
+
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-671535935/Cyk1CKvu38oaEL-mm8AC",
+          event_callback: callback,
+        });
+        return false;
+      }
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-671535935");
     </script>
     <!-- End Google Tag Manager -->
 

@@ -1,3 +1,31 @@
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof url != "undefined") {
+      window.location = url;
+    }
+  };
+  gtag("event", "conversion", {
+    send_to: "AW-671535935/Cyk1CKvu38oaEL-mm8AC",
+    event_callback: callback,
+  });
+  return false;
+}
+
+const form = document.querySelector(".workwithus__form");
+if (form) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    alert("Вiдправлено! Дякую.");
+
+    gtag_report_conversion();
+
+    setTimeout(() => {
+      form.submit();
+    }, 200); // 200–300 мс хватает
+  });
+}
+
 document.querySelector(".products__list").addEventListener("click", (event) => {
   const target = event.target;
   if (target.classList.contains("products__desc-btn")) {
